@@ -1,20 +1,20 @@
-name: 2024-aqgeo-meeting-em-tutorial
+name: 2024-aqgeo-em-tutorial
 
 channels:
   - conda-forge
   - defaults
 dependencies:
-  - python=3.11
+  - python>=3.10
   - numpy
   - scipy
   - matplotlib
   - jupyterlab
   - ipywidgets
   - simpeg
-  - choclo
+  - choclo 
 
 # solver
 # uncomment the next line if you are on an intel platform
 #  - pydiso # if on intel pc
 # uncomment this line if you want to install mumps solvers
-  - python-mumps
+#  - python-mumps
