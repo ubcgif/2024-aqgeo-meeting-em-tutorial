@@ -1,0 +1,18 @@
+name: Article Show Draft
+on:
+  pull_request_target:
+    branches: ["main"]
+    types: [labeled, opened, synchronize, reopened]
+permissions:
+  contents: read
+  pull-requests: write
+jobs:
+  draft:
+    uses: curvenote/actions/.github/workflows/draft.yml@v1
+    with:
+      venue: gif-consortium
+      kind: tutorial
+      collection: aqgeo
+    secrets:
+      CURVENOTE: ${{ secrets.CURVENOTE_TOKEN }}
+      GITHUB: ${{ secrets.GITHUB_TOKEN }}

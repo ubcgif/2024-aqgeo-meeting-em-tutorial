@@ -41,9 +41,12 @@ project:
   thumbnail: thumbnail.png
   numbering:
     headings: true
+  toc:
+    - file: README.md
+    - file: 1-forward-simulation.ipynb
+    - file: 2-forward-stacked-conductors.ipynb
+    - file: 3-forward-OcTree.ipynb
+    - file: 3-forward-Tensor.ipynb
+    - file: 4-inversion-1D.ipynb
 site:
-  template: article-theme
-  actions:
-    - title: pdf
-      # url: NAME-OF-PDF.pdf
-      static: true
+  template: book-theme

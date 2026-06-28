@@ -1,0 +1,18 @@
+name: Article Publish
+on:
+  push:
+    branches: ["main"]
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  publish:
+    uses: curvenote/actions/.github/workflows/submit.yml@v1
+    with:
+      venue: gif-consortium
+      kind: tutorial
+      collection: aqgeo
+      publish: true
+    secrets:
+      CURVENOTE: ${{ secrets.CURVENOTE_TOKEN }}
+      GITHUB: ${{ secrets.GITHUB_TOKEN }}
