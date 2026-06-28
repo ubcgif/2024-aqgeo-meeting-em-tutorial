@@ -9,6 +9,7 @@ jobs:
   publish:
     uses: curvenote/actions/.github/workflows/submit.yml@v1
     with:
+      id-pattern-regex: "^ubcgif-(?:[a-zA-Z0-9-_]{3,40})$"
       venue: gif-consortium
       kind: tutorial
       collection: aqgeo
